@@ -12,11 +12,24 @@ class News {
     private String headline;
     private URL url;
     private String section;
+    private String date;
+    private String author;
 
-    News(String headline, URL url, String section) {
+
+    News(String headline, URL url, String section,String date,String author) {
         this.headline = headline;
         this.url = url;
         this.section = section;
+        this.date = date;
+        this.author = author;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public String getAuthor() {
+        return author;
     }
 
     URL getUrl() {

@@ -21,7 +21,7 @@ import java.util.List;
 
 public class NewsActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<List<News>> {
 
-    String GUARDIAN_DATA = "http://content.guardianapis.com/search?order-by=newest&q=english%20premier%20league&api-key=36ec69f0-a725-46fc-bff6-4943af00d300";
+    String GUARDIAN_DATA = "http://content.guardianapis.com/search?order-by=newest&q=english%20premier%20league&api-key=36ec69f0-a725-46fc-bff6-4943af00d300&show-tags=contributor";
     private NewsAdapter adapter;
     private TextView mEmptyStateTextView;
     SwipeRefreshLayout srl;

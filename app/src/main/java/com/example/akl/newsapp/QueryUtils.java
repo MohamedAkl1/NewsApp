@@ -162,13 +162,15 @@ final class QueryUtils {
                 // Get a single article at position i within the list of earthquakes
                 JSONObject currentArticle = newsArray.getJSONObject(i);
 
+                String date = currentArticle.getString("webPublicationDate");
+                String author = currentArticle.getJSONArray("tags").getJSONObject(0).optString("webTitle");
                 String title = currentArticle.getString("webTitle");
                 String url = currentArticle.getString("webUrl");
                 String section = currentArticle.getString("sectionName");
 
                 // Create a new {@link Earthquake} object with the magnitude, location, time,
                 // and url from the JSON response.
-                News article = new News(title,createUrl(url), section);
+                News article = new News(title,createUrl(url), section,date,author);
 
                 // Add the new {@link Earthquake} to the list of earthquakes.
                 articles.add(article);
@@ -178,7 +180,7 @@ final class QueryUtils {
             // If an error is thrown when executing any of the above statements in the "try" block,
             // catch the exception here, so the app doesn't crash. Print a log message
             // with the message from the exception.
-            Log.e("QueryUtils", "Problem parsing the earthquake JSON results", e);
+            Log.e("QueryUtils", "Problem parsing the news JSON results", e);
         }
 
         // Return the list of earthquakes
