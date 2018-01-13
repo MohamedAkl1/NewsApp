@@ -1,7 +1,5 @@
 package com.example.akl.newsapp;
 
-import android.widget.ImageView;
-
 import java.net.URL;
 
 /**
@@ -24,11 +22,11 @@ class News {
         this.author = author;
     }
 
-    public String getDate() {
+    String getDate() {
         return date;
     }
 
-    public String getAuthor() {
+    String getAuthor() {
         return author;
     }
 

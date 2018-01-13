@@ -171,7 +171,7 @@ final class QueryUtils {
 
                 // Create a new {@link Earthquake} object with the magnitude, location, time,
                 // and url from the JSON response.
-                News article = new News(title,createUrl(url), section,date,author);
+                News article = new News(title, createUrl(url), section, date, author);
 
                 // Add the new {@link Earthquake} to the list of earthquakes.
                 articles.add(article);
