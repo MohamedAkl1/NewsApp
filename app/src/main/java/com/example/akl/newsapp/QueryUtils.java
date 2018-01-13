@@ -163,7 +163,8 @@ final class QueryUtils {
                 JSONObject currentArticle = newsArray.getJSONObject(i);
 
                 String date = currentArticle.getString("webPublicationDate");
-                String author = currentArticle.getJSONArray("tags").getJSONObject(0).optString("webTitle");
+                JSONArray results = currentArticle.getJSONArray("tags");
+                String author = results.getJSONObject(0).optString("webTitle");
                 String title = currentArticle.getString("webTitle");
                 String url = currentArticle.getString("webUrl");
                 String section = currentArticle.getString("sectionName");
