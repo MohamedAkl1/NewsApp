@@ -19,7 +19,6 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -81,7 +80,7 @@ public class NewsActivity extends AppCompatActivity implements LoaderManager.Loa
     @Override
     public Loader<List<News>> onCreateLoader(int id, Bundle args) {
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
-        String section = sharedPreferences.getString(getString(R.string.settings_order_by_key),getString(R.string.settings_order_by_default));
+        String section = sharedPreferences.getString(getString(R.string.settings_filter_key),getString(R.string.settings_filter_default));
         Uri baseUri = Uri.parse(GUARDIAN_DATA);
         Uri.Builder uriBuilder = baseUri.buildUpon();
         uriBuilder.appendQueryParameter("q",section);
@@ -111,7 +110,6 @@ public class NewsActivity extends AppCompatActivity implements LoaderManager.Loa
         if (manager1 != null) {
             info = manager1.getActiveNetworkInfo();
         }
-
         if(info != null && info.isConnectedOrConnecting()){
             LoaderManager manager = getLoaderManager();
             manager.initLoader(0,null,this);

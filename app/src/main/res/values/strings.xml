@@ -6,17 +6,17 @@
     <string name="settings_menu_item">Settings</string>
     <string name="settings_title">News Settings</string>
     <string name="settings_narrow_down_label">Narrow down by section</string>
-    <string name="settings_order_by_key" translatable="false">order_by</string>
-    <string name="settings_order_by_default" translatable="false">@string/settings_football_value</string>
+    <string name="settings_filter_key" translatable="false">filter_by</string>
+    <string name="settings_filter_default" translatable="false">@string/settings_football_value</string>
     <string name="settings_football_label">Football</string>
     <string name="settings_football_value" translatable="false">football</string>
     <string name="settings_politics_label">Politics</string>
     <string name="settings_politics_value" translatable="false">politics</string>
-    <string-array name="settings_order_by_labels">
+    <string-array name="settings_filter_by_labels">
         <item>@string/settings_football_label</item>
         <item>@string/settings_politics_label</item>
     </string-array>
-    <string-array name="settings_order_by_values">
+    <string-array name="settings_filter_by_values">
         <item>@string/settings_football_value</item>
         <item>@string/settings_politics_value</item>
     </string-array>

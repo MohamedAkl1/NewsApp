@@ -10,7 +10,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -25,7 +24,6 @@
             android:id="@+id/date"
             tools:text="15/11/2015555" />
     </LinearLayout>
-
 
     <TextView
         android:layout_width="wrap_content"
@@ -54,8 +52,4 @@
             android:id="@+id/author"/>
 
     </RelativeLayout>
-
-
-
-
 </LinearLayout>

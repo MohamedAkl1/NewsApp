@@ -13,7 +13,6 @@ class News {
     private String date;
     private String author;
 
-
     News(String headline, URL url, String section,String date,String author) {
         this.headline = headline;
         this.url = url;
